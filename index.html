@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#090a12">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" href="icons/youth-192.png" type="image/png">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="Youth">
+  <meta name="description" content="Youth — a next-generation social space with glass UI and AI support.">
+  <title>Youth — Social, Reimagined</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="ambient ambient-one"></div><div class="ambient ambient-two"></div><div class="ambient ambient-three"></div>
+  <header class="topbar glass">
+    <a class="brand" href="#" aria-label="Youth home"><span class="brand-mark">Y</span><span>Youth<span class="brand-dot">.</span></span></a>
+    <div class="top-search"><span>⌕</span><input id="search-input" placeholder="Search Youth..." aria-label="Search posts"></div>
+    <div class="top-actions"><button class="icon-button" id="ai-open-top" aria-label="Open AI assistant" title="Youth AI">✧</button><div class="mini-avatar">Y</div></div>
+  </header>
+
+  <main class="app-shell">
+    <aside class="sidebar glass">
+      <div class="profile-mini"><div class="profile-orb">Y</div><div><strong id="sidebar-name">Welcome to Youth</strong><span id="sidebar-email">Your people. Your world.</span></div></div>
+      <nav class="nav-list" aria-label="Main navigation">
+        <button class="nav-item active" data-view="home"><span>⌂</span> Home <kbd>01</kbd></button>
+        <button class="nav-item" data-view="shorts"><span>▷</span> Youth Shorts <kbd>02</kbd></button>
+        <button class="nav-item" data-view="explore"><span>⌕</span> Explore <kbd>03</kbd></button>
+        <button class="nav-item" data-view="messages"><span>◌</span> Messages <kbd>04</kbd></button>
+        <button class="nav-item" data-view="profile"><span>◎</span> My Profile <kbd>05</kbd></button>
+      </nav>
+      <div class="sidebar-divider"></div>
+      <div class="side-label">YOUR SPACE</div>
+      <div class="space-card"><div class="space-icon">✦</div><div><strong>Youth AI</strong><span>Your creative copilot</span></div><button id="ai-open-side" aria-label="Open Youth AI">↗</button></div>
+      <div class="side-footer"><span class="online-dot"></span> Social beta <span class="version">v0.2</span></div>
+    </aside>
+
+    <section class="main-column">
+      <section class="hero glass" id="hero">
+        <div class="hero-copy"><div class="eyebrow"><span class="pulse-dot"></span> THE NEXT SOCIAL ERA</div>
+          <h1>Your world.<br><span>Your wavelength.</span></h1>
+          <p>Share a moment, discover a new perspective, and connect with your people — all in one space.</p>
+          <div class="hero-buttons"><button class="button button-primary" id="hero-post">＋ Create a post</button><button class="button button-glass" id="hero-ai">✧ Ask Youth AI</button></div>
+        </div>
+        <div class="hero-art" aria-hidden="true"><div class="orbit orbit-a"></div><div class="orbit orbit-b"></div><div class="glass-cube"><div class="cube-face face-front">Y<span>✦</span></div><div class="cube-face face-back"></div><div class="cube-face face-side"></div><div class="cube-shine"></div></div><div class="floating-chip chip-top">✧ AI INSIDE</div><div class="floating-chip chip-bottom"><span class="pulse-dot"></span> YOUR SPACE</div></div>
+      </section>
+
+      <section class="composer glass" id="composer">
+        <div class="composer-head"><div class="avatar avatar-gradient" id="composer-avatar">Y</div><div><strong>Make a moment</strong><span>What's on your mind?</span></div><span class="composer-spark">✦</span></div>
+        <form id="post-form"><textarea id="post-text" maxlength="1000" placeholder="Share a thought with your community..." required></textarea><div class="composer-bottom"><span class="muted tiny">Be kind. Keep it real. · 1,000 characters</span><button type="submit" class="button button-primary">Publish <span>↗</span></button></div></form>
+        <p id="message" class="message" aria-live="polite"></p>
+      </section>
+
+      <div class="feed-heading"><div><div class="eyebrow">YOUR COMMUNITY</div><h2 id="view-title">The latest <span>moments</span></h2></div><div class="feed-filter"><button class="filter active" data-filter="all">For you</button><button class="filter" data-filter="mine">My posts</button></div></div>
+      <section id="feed-list" class="feed-list"><article class="post-card glass"><div class="post-author-row"><div class="avatar avatar-gradient">Y</div><div><strong>Youth Team</strong><span>Welcome to Youth · Demo</span></div><span class="post-menu">•••</span></div><p>Welcome to Youth — a fresh place for your thoughts, stories, and community. ✨</p><div class="post-actions"><button disabled>♡ Like</button><button disabled>◯ Comment</button><button disabled>↗ Share</button></div></article></section>
+
+      <section id="shorts-view" class="hidden"><div class="shorts-grid"><article class="short-card short-one"><div class="short-play">▶</div><span>YOUTH SHORTS</span><strong>Stories in motion.</strong><small>Video feed is ready for the next build</small></article><article class="short-card short-two"><div class="short-play">▶</div><span>CREATE</span><strong>Your moment, your style.</strong><small>Upload support needs secure storage setup</small></article></div></section>
+      <section id="explore-view" class="hidden glass explore-panel"><div class="eyebrow">DISCOVER</div><h2>Find your next <span>inspiration.</span></h2><p class="muted">Search community posts using the search bar above. Trending topics and user discovery can be added next.</p></section>
+      <section id="messages-view" class="hidden glass explore-panel"><div class="eyebrow">YOUR INBOX</div><h2>Good conversations <span>start here.</span></h2><p class="muted">Direct messaging is planned. It needs a secure message database and user-to-user access rules before launch.</p></section>
+      <section id="profile-view" class="hidden glass explore-panel"><div class="eyebrow">YOUR IDENTITY</div><h2>Your Youth <span>profile.</span></h2><p class="muted" id="profile-info">Sign in to show your account details here.</p><div class="auth-card"><form id="auth-form"><label for="email">Email address</label><input id="email" type="email" autocomplete="email" placeholder="you@example.com" required><label for="password">Password</label><input id="password" type="password" autocomplete="current-password" minlength="6" placeholder="At least 6 characters" required><div class="auth-actions"><button class="button button-primary" type="submit">Create account</button><button class="button button-glass" type="button" id="login-btn">Log in</button><button class="button button-quiet hidden" type="button" id="logout-btn">Log out</button></div><p id="auth-message" class="message" aria-live="polite"></p></form><p class="tiny muted">Email login works after Firebase is configured. Phone sign-in is not yet connected.</p></div></section>
+    </section>
+
+    <aside class="right-column">
+      <section class="glass right-card ai-card"><div class="ai-card-top"><div class="ai-icon">✧</div><span class="live-label"><span class="online-dot"></span> READY TO HELP</span></div><div class="eyebrow">MEET YOUR COPILOT</div><h3>Youth <span>AI</span></h3><p>Ideas, captions, creativity, and everyday questions — ask away.</p><button class="button button-primary full" id="ai-open-card">Start a conversation <span>↗</span></button><div class="ai-orb"><div class="orb-core">✧</div><div class="orb-ring ring-one"></div><div class="orb-ring ring-two"></div></div></section>
+      <section class="glass right-card"><div class="card-heading"><h3>Community notes</h3><span>✦</span></div><div class="note-row"><span class="note-icon">♡</span><div><strong>Keep it kind</strong><p>Respect people and their boundaries.</p></div></div><div class="note-row"><span class="note-icon">◇</span><div><strong>Protect your privacy</strong><p>Don't share passwords or private details.</p></div></div></section>
+      <div class="side-footer right-footer"><span>Made for the next generation.</span><span>© <span id="year"></span> Youth</span></div>
+    </aside>
+  </main>
+
+  <nav class="mobile-nav glass"><button class="active" data-view="home">⌂<span>Home</span></button><button data-view="shorts">▷<span>Shorts</span></button><button id="mobile-create">＋<span>Create</span></button><button id="mobile-ai">✧<span>AI</span></button><button data-view="profile">◎<span>Profile</span></button></nav>
+
+  <div id="ai-modal" class="modal hidden" role="dialog" aria-modal="true" aria-labelledby="ai-title"><div class="modal-backdrop" id="ai-close-backdrop"></div><section class="ai-window glass"><div class="ai-window-head"><div class="ai-heading"><div class="ai-icon">✧</div><div><h2 id="ai-title">Youth AI</h2><span><i class="online-dot"></i> Your creative copilot</span></div></div><button class="close-button" id="ai-close" aria-label="Close AI">×</button></div><div class="ai-suggestions"><button>Write a caption</button><button>Give me ideas</button><button>Explain something</button></div><div id="chat-log" class="chat-log"><div class="chat-bubble assistant"><span class="bubble-label">YOUTH AI</span>Hey there! ✨ I can help with captions, ideas, writing, and questions. What are we creating today?</div></div><form id="ai-form" class="ai-form"><textarea id="ai-input" rows="1" maxlength="1500" placeholder="Message Youth AI..." required></textarea><button type="submit" class="send-button" aria-label="Send message">↗</button></form><div class="ai-disclaimer">AI can make mistakes. Don't share passwords or sensitive personal information.</div></section></div>
+  <div id="toast" class="toast hidden" role="status"></div>
+  <script type="module" src="app.js"></script>
+  <script>
+    if ("serviceWorker" in navigator && location.protocol.startsWith("http")) {
+      window.addEventListener("load", () => {
+        navigator.serviceWorker.register("./service-worker.js").catch(err => console.warn("Service worker registration failed", err));
+      });
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+{
+  "id": "./",
+  "name": "Youth — Social, Reimagined",
+  "short_name": "Youth",
+  "description": "A dark social space with posts, short-video previews, and Youth AI support.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "background_color": "#090a12",
+  "theme_color": "#090a12",
+  "categories": ["social", "lifestyle"],
+  "icons": [
+    {
+      "src": "icons/youth-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "icons/youth-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "icons/youth-512-maskable.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ]
+}
